@@ -92,7 +92,7 @@
     {
       "id": 7,
       "name": "Gladiator",
-      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBhwDpB08O2L5mZ0WIARuXUznGjMFj7k3vEwnrHqXYMcTXlWegX9r3s6NOs8&s=10",
+      "cover": "https://m.media-amazon.com/images/I/51GA6V6VE1L._SX300_SY300_QL70_FMwebp_.jpg",
       "rating": 4.35,
       "reviews": [
       ]
@@ -100,7 +100,7 @@
     {
       "id": 8,
       "name": "Titanic",
-      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR09mQFG3dBHrT5KSKTYnM5Yn-jcPARe55m609vxJxsEDd2woemRHd6tCj8zuw&s=10",
+      "cover": "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_568,c_scale/jackets/9781408163573.jpg",
       "rating": 4.15,
       "reviews": [
       ]
