@@ -32,6 +32,8 @@
 
             .movie {
                 img {
+                    width: 160px;
+                    height: 200px;
                     border-radius: 5px;
                 }
             }
@@ -44,6 +46,24 @@
                     height: 50px;
                     margin-top: 5px;
                     cursor: pointer;
+                }
+
+                .rating {
+                    i {
+                        position: relative;
+                        display: inline-block;
+                        font-size: 30px;
+                        padding-right: 0.1rem;
+                        color: black;
+                      }
+                      
+                      .filled {
+                        color: red;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                      }
                 }
             }
         }

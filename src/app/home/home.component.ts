@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,12 @@ import { NgFor } from '@angular/common';
   imports: [
     HeaderComponent,
     HttpClientModule,
-    NgFor
+    NgFor,
+    NgbRatingModule,
+    NgIf,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   trendingMovies: any;
@@ -29,4 +32,8 @@ export class HomeComponent {
       console.log(this.trendingMovies);
     });
   }
+
+  ariaValueText(current: number, max: number) {
+		return `${current} out of ${max} hearts`;
+	}
 }
