@@ -1,0 +1,14 @@
+i {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    color: gray;
+  }
+  
+  .filled {
+    color: red;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
