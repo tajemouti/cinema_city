@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NgFor, NgIf } from '@angular/common';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
+import { RatingComponent } from "../rating/rating.component";
 
 @Component({
   selector: 'app-home',
@@ -12,9 +12,8 @@ import { Router } from '@angular/router';
     HeaderComponent,
     HttpClientModule,
     NgFor,
-    NgbRatingModule,
-    NgIf,
-  ],
+    RatingComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -48,10 +47,6 @@ export class HomeComponent {
       this.popularMovies = movies;
     });
   }
-
-  ariaValueText(current: number, max: number) {
-		return `${current} out of ${max} hearts`;
-	}
 
   goToMovie(type: string, id: string) {
     this.router.navigate(['movie', type, id]);

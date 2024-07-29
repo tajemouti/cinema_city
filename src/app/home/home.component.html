@@ -14,16 +14,8 @@
           <div class="detail">
             <div class="name">{{movie.name}}</div>
             <div class="rating">
-              <div>
-                <ng-template #t let-fill="fill">
-                  <i class="bi-heart-fill">
-                    <i *ngIf="fill > 0" class="bi-heart-fill filled" [style.width.%]="fill"></i>
-                  </i>
-                </ng-template>
-                <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5"
-                  [ariaValueText]="ariaValueText"></ngb-rating>
-              </div>
               <span class="rating-value">{{ movie.rating }}</span>
+              <app-rating [rating]="movie.rating" [isReadOnly]="true"></app-rating>
             </div>
           </div>
         </div>
@@ -42,16 +34,8 @@
           <div class="detail">
             <div class="name">{{movie.name}}</div>
             <div class="rating">
-              <div>
-                <ng-template #t let-fill="fill">
-                  <i class="bi-heart-fill">
-                    <i *ngIf="fill > 0" class="bi-heart-fill filled" [style.width.%]="fill"></i>
-                  </i>
-                </ng-template>
-                <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5"
-                  [ariaValueText]="ariaValueText"></ngb-rating>
-              </div>
               <span class="rating-value">{{ movie.rating }}</span>
+              <app-rating [rating]="movie.rating" [isReadOnly]="true"></app-rating>
             </div>
           </div>
         </div>
@@ -64,15 +48,8 @@
       <div class="movie" *ngFor="let movie of popularMovies">
         <div class="name" (click)="goToMovie('popular', movie.id)">{{movie.name}}</div>
         <div class="rating">
-          <div>
-            <ng-template #t let-fill="fill">
-              <i class="bi-heart-fill">
-                <i *ngIf="fill > 0" class="bi-heart-fill filled" [style.width.%]="fill"></i>
-              </i>
-            </ng-template>
-            <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5"
-              [ariaValueText]="ariaValueText"></ngb-rating>
-          </div>
+          <span class="rating-value">{{ movie.rating }}</span>
+          <app-rating [rating]="movie.rating" [isReadOnly]="true"></app-rating>
         </div>
       </div>
       <div class="view-all">View all</div>
