@@ -1,78 +1,119 @@
 .home-container {
-    display: flex;
+  display: flex;
 
-    .all-movies {
-        width: 75%;
-        min-height: calc(100vh - 80px);
-        border-right: 1px solid #fdc827;
-        padding: 20px 40px;
-        font-family: "Roboto", sans-serif;
-        
-        .top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+  .all-movies {
+    width: 75%;
+    min-height: calc(100vh - 80px);
+    border-right: 1px solid #fdc827;
+    padding: 20px 40px;
+    font-family: "Roboto", sans-serif;
 
-            h4 {
-                text-transform: uppercase;
-                font-weight: bold;
-                border-left: 5px solid #ff9900;
-                padding-left: 10px;
-            }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-            .view-all {
-                color: #ff9900;
-                cursor: pointer;
-            }
-        }
+      h4 {
+        text-transform: uppercase;
+        font-weight: bold;
+        border-left: 5px solid #ff9900;
+        padding-left: 10px;
+      }
 
-        .movies-thumbnail {
-            display: flex;
-            justify-content: space-between;
-
-            .movie {
-                img {
-                    width: 160px;
-                    height: 200px;
-                    border-radius: 5px;
-                }
-            }
-
-            .detail {
-                width: 180px;
-
-                .name {
-                    font-weight: bold;
-                    height: 50px;
-                    margin-top: 5px;
-                    cursor: pointer;
-                }
-
-                .rating {
-                    i {
-                        position: relative;
-                        display: inline-block;
-                        font-size: 30px;
-                        padding-right: 0.1rem;
-                        color: black;
-                      }
-                      
-                      .filled {
-                        color: red;
-                        overflow: hidden;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                      }
-                }
-            }
-        }
+      .view-all {
+        color: #ff9900;
+        cursor: pointer;
+      }
     }
 
-    .popular-movies {
-        width: 25%;
-        min-height: calc(100vh - 80px);
-        padding: 20px 40px;
-        font-family: "Roboto", sans-serif;
+    .movies-thumbnail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      .movie {
+        .cover {
+          img {
+            width: 180px;
+            height: 240px;
+            border-radius: 5px;
+          }
+        }
+
+        .detail {
+          width: 180px;
+
+          .name {
+            font-weight: bold;
+            height: 50px;
+            margin-top: 5px;
+            cursor: pointer;
+          }
+
+          .rating {
+            padding-right: 45px;
+            position: relative;
+
+            .rating-value {
+              position: absolute;
+              top: 10px;
+              right: 0;
+              font-weight: bold;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .popular-movies {
+    width: 25%;
+    min-height: calc(100vh - 80px);
+    padding: 20px 40px;
+    font-family: "Roboto", sans-serif;
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: bold;
+      border-left: 5px solid #ff9900;
+      padding-left: 10px;
+    }
+
+    .movies {
+      .movie {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .view-all {
+        color: #ff9900;
+        text-align: right;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+i {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  color: gray;
+}
+
+.filled {
+  color: red;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
